@@ -1,0 +1,19 @@
+language: csharp
+mono:
+  - latest
+
+solution: PCLExt.Input.sln
+
+before_install:
+  - git submodule update --init --recursive
+  
+install:
+  - nuget restore PCLExt.Input.sln
+  
+script:
+  - xbuild /p:Configuration=Release PCLExt.Input.sln
+  - xbuild /p:Configuration=Debug PCLExt.Input.sln
+
+notifications:
+  email:
+    on_success: always
