@@ -61,9 +61,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\PCLExt.Input.Abstractions\PCLExt.Input.Abstractions.csproj">
       <Project>{3f8d0494-6ee2-47fe-b263-f09a5ea3d0b3}</Project>
       <Name>PCLExt.Input.Abstractions</Name>

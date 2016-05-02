@@ -52,7 +52,7 @@ You should reference the PCLExt.Input NuGet package from your main application p
         public static void ShowKeyboard()
         {
 #if DESKTOP || MAC
-
+            return;
 #endif
 
             throw NotImplementedInReferenceAssembly();
@@ -61,7 +61,7 @@ You should reference the PCLExt.Input NuGet package from your main application p
         public static void HideKeyboard()
         {
 #if DESKTOP || MAC
-
+            return;
 #endif
 
             throw NotImplementedInReferenceAssembly();
@@ -74,8 +74,10 @@ You should reference the PCLExt.Input NuGet package from your main application p
                 ConsoleManager.FastConsole.WriteLine(message);
             else
                 Console.WriteLine(message);
+            return;
 #elif ANDROID || __IOS__
             Console.WriteLine(message);
+            return;
 #endif
 
             throw NotImplementedInReferenceAssembly();
@@ -92,12 +94,14 @@ You should reference the PCLExt.Input NuGet package from your main application p
                 ConsoleManager.FastConsole.WriteLine(msg_1);
             else
                 Console.WriteLine(msg_1);
+            return;
 #elif ANDROID || __IOS__
             var msg_0 = $"[{DateTime.Now:yyyy-MM-dd_HH:mm:ss}]_{message}";
             LogManager.WriteLine(msg_0);
 
             var msg_1 = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] {message}";
             Console.WriteLine(msg_1);
+            return;
 #endif
 
             throw NotImplementedInReferenceAssembly();
